@@ -126,13 +126,14 @@ function getMintQueryParams(props: CrossmintPayButton) {
  * @returns The generated URL
  * @example
  * ```ts
- * const url = generateCrossmintPaymentUrl({
- *  clientId: 'your-client-id',
- *  mintTo: '0x1234',
- *  listingId: 'your-listing-id',
- *  clientName: 'your-client-name',
- *  locale: 'en-US',
- *  currency: 'usd',
+ * const crossmintPaymentUrl = generateCrossmintPaymentUrl({
+ *   projectId: '_YOUR_PROJECT_ID_',
+ *   collectionId: '_YOUR_CLIENT_ID',
+ *   mintConfig: {
+ *     type: 'erc-721',
+ *     totalPrice: '0.001',
+ *     _quantity: '1',
+ *   },
  * })
  * ```
  */
