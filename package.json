@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/belongnet/crossmint-sdk-modal-less/issues"
   },
-  "homepage": "https://github.com/belongnet/crossmint-sdk-modal-less#readme"
+  "homepage": "https://github.com/belongnet/crossmint-sdk-modal-less#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
