@@ -1,6 +1,6 @@
 # crossmint-sdk-modal-less
 
-Crossmint SDK for client and server integrations, but without modal
+Generates a link for your custom pop-up implementation of the checkout process using the [Crossmint Pay Button](https://docs.crossmint.com/nft-checkout/pay-button/overview).
 
 ## Installation
 
@@ -9,8 +9,6 @@ pnpm add @belongnet/crossmint-sdk-modal-less
 ```
 
 ## Usage
-
-### Client
 
 ```ts
 import { generateCrossmintPaymentUrl } from '@belongnet/crossmint-sdk-modal-less'
