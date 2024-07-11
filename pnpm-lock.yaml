@@ -11,9 +11,6 @@ importers:
       '@crossmint/client-sdk-base':
         specifier: ^1.1.13
         version: 1.1.13
-      valibot:
-        specifier: ^0.36.0
-        version: 0.36.0
     devDependencies:
       prettier:
         specifier: ^3.3.2
@@ -488,9 +485,6 @@ packages:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
 
-  valibot@0.36.0:
-    resolution: {integrity: sha512-CjF1XN4sUce8sBK9TixrDqFM7RwNkuXdJu174/AwmQUB62QbCQADg5lLe8ldBalFgtj1uKj+pKwDJiNo4Mn+eQ==}
-
   vite-node@2.0.2:
     resolution: {integrity: sha512-w4vkSz1Wo+NIQg8pjlEn0jQbcM/0D+xVaYjhw3cvarTanLLBh54oNiRbsT8PNK5GfuST0IlVXjsNRoNlqvY/fw==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -930,8 +924,6 @@ snapshots:
   typescript@5.5.3: {}
 
   uuid@9.0.1: {}
-
-  valibot@0.36.0: {}
 
   vite-node@2.0.2:
     dependencies:

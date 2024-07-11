@@ -12,20 +12,21 @@ pnpm add @belongnet/crossmint-sdk-modal-less
 
 ### Client
 
-```javascript
-import { generateCrossmintPaymentUrl } from '@belongnet/crossmint-sdk-modal-less';
+```ts
+import { generateCrossmintPaymentUrl } from '@belongnet/crossmint-sdk-modal-less'
 
-const url = generateCrossmintPaymentUrl({
+const crossmintPaymentUrl = generateCrossmintPaymentUrl({
   amount: 100,
   currency: 'usd',
   successUrl: 'https://example.com/success',
-  cancelUrl: 'https://example.com/cancel
+  cancelUrl: 'https://example.com/cancel',
 })
 
-const modal = window.open(url, '_blank');
+// your modal implementation
+const modal = window.open(crossmintPaymentUrl, '_blank')
 
-// Close the modal
-modal.close();
+// close the modal
+modal.close()
 ```
 
 ## License

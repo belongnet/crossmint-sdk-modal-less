@@ -1,23 +1,36 @@
 {
   "name": "@belongnet/crossmint-sdk-modal-less",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A SDK for Crossmint integration without modals.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "reslear",
-  "license": "ISC",
+  "keywords": [
+    "crossmint",
+    "sdk",
+    "modal-less",
+    "integration"
+  ],
+  "author": "Reslear",
+  "license": "MIT",
   "dependencies": {
-    "@crossmint/client-sdk-base": "^1.1.13",
-    "valibot": "^0.36.0"
+    "@crossmint/client-sdk-base": "^1.1.13"
   },
   "devDependencies": {
     "prettier": "^3.3.2",
     "typescript": "^5.5.3",
     "vitest": "^2.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/belongnet/crossmint-sdk-modal-less.git"
+  },
+  "bugs": {
+    "url": "https://github.com/belongnet/crossmint-sdk-modal-less/issues"
+  },
+  "homepage": "https://github.com/belongnet/crossmint-sdk-modal-less#readme"
 }
