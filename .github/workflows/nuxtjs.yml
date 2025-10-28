@@ -33,9 +33,8 @@ jobs:
         run: cd playground && pnpm build
         env:
           NITRO_PRESET: github_pages
-          NUXT_APP_BASE_URL: /enoki-vue/
-          NUXT_PUBLIC_ENOKI_API_KEY: ${{ secrets.VITE_ENOKI_API_KEY }}
-          NUXT_PUBLIC_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_OAUTH_APP_ID_WEB }}
+          NUXT_APP_BASE_URL: /crossmint-sdk-modal-less/
+          # other secrets 
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
