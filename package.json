@@ -21,9 +21,8 @@
     "@crossmint/client-sdk-base": "^1.1.13"
   },
   "devDependencies": {
-    "prettier": "^3.3.2",
-    "typescript": "^5.5.3",
-    "vitest": "^2.0.2"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.4"
   },
   "repository": {
     "type": "git",
