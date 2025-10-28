@@ -6,7 +6,15 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@vueuse/nuxt',
+    '@nuxt/icon',
   ],
   css: ['~/assets/css/main.css'],
-
+  ui: {
+    fonts: false,
+  },
+  icon: {
+    clientBundle: {
+      scan: true,
+    },
+  },
 })
