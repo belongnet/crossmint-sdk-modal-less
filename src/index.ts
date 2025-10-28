@@ -1,5 +1,5 @@
-import type { CrossmintHostedCheckoutV3Props } from '@crossmint/client-sdk-base'
 import { validateApiKeyAndGetCrossmintBaseUrl } from '@crossmint/common-sdk-base'
+import type { CrossmintHostedCheckoutV3Props } from '@crossmint/client-sdk-base'
 
 // Matches packages/client/base/package.json
 export const LIB_VERSION = '1.7.2'
