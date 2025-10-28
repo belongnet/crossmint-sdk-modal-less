@@ -27,8 +27,15 @@ const footerItems = ref([
         <h1 class="text-3xl font-semibold">
           Crossmint Modal-less Playground
         </h1>
+
         <p class="text-sm">
-          Minimal example. Click the button to open a test checkout and get the generated URL.
+          for
+          <ULink
+            to="https://docs.crossmint.com/payments/embedded/upgrade/v3"
+            target="_blank"
+          >
+            Crossmint v3 (migration guide) <UIcon name="i-heroicons-arrow-top-right-on-square" />
+          </ULink>
         </p>
       </div>
     </header>

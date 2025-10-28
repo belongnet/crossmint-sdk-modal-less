@@ -1,43 +1,48 @@
 <script setup lang="ts">
-import type { CrossmintPayButtonProps } from '@crossmint/client-sdk-base'
-import { generateCrossmintPaymentUrl } from '@belongnet/crossmint-sdk-modal-less'
+import type { GenerateCrossmintHostedCheckoutUrlOptions } from '@belongnet/crossmint-sdk-modal-less'
+import {
 
-type DemoPayload = CrossmintPayButtonProps & {
-  clientId: string
-  clientName: string
-}
+  generateCrossmintPaymentUrl,
+} from '@belongnet/crossmint-sdk-modal-less'
 
-const demoPayload: DemoPayload = {
-  collectionId: '76be223b-60cd-4fe0-9e4b-dffe5df11e4c',
-  paymentMethod: 'fiat',
-  clientId: '76be223b-60cd-4fe0-9e4b-dffe5df11e4c',
-  clientName: 'crossmint-sdk-modal-less/playground',
-  projectId: 'b6e12fa9-f0ac-4e73-9234-9410f8aa114b',
-  mintConfig: {
-    totalPrice: '0.005',
-    reciever: '0xaae640a40cff7841afea3b5917da67ebe7aec2bf',
-    tokenId: '516',
-    tokenUri:
-      'https://foster-images.s3.us-east-1.amazonaws.com/up/assets/nft/0x441858547552f7238d79662a98b3ea8f49add2fb/516.json',
-    whitelisted: false,
-    signature: '0x13f23d3c7e1c0',
-    _expectedMintPrice: '5000000000000000',
-    _expectedPayingToken: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
-  },
-  environment: 'staging',
-  mintTo: '0xaae640a40cff7841afea3b5917da67ebe7aec2bf',
-  emailTo: 'example@mail.com',
-  checkoutProps: {
-    experimental: true,
-    paymentMethods: ['fiat'],
-    display: 'same-tab',
+const demoPayload: GenerateCrossmintHostedCheckoutUrlOptions = {
+  recipient: {
+    email: 'buyer@crossmint.com',
   },
   locale: 'en-US',
-  currency: 'usd',
-  successCallbackURL:
-    'https://localhost:8100/payments?target=event-ticket&eventId=661e72f5406bf8078792b4ab',
-  failureCallbackURL:
-    'https://localhost:8100/payments?target=event-ticket&eventId=661e72f5406bf8078792b4ab',
+  lineItems: {
+    collectionLocator: 'crossmint:6294235c-135e-4be8-a0c6-4d3f5d5ae5c4',
+    callData: {
+      totalPrice: '2',
+    },
+  },
+  payment: {
+    crypto: {
+      enabled: true,
+      defaultChain: 'base-sepolia',
+      defaultCurrency: 'usdc',
+    },
+    fiat: {
+      enabled: true,
+      defaultCurrency: 'usd',
+    },
+    receiptEmail: 'receipt@crossmint.com',
+  },
+  appearance: {
+    display: 'popup',
+    overlay: {
+      enabled: true,
+    },
+    theme: {
+      button: 'dark',
+      checkout: 'light',
+    },
+  },
+  apiKey: 'ck_staging_26GbRg2pHpXxur9h8tFLKqT7bLDyoDojpk79DCRSdAhPtAiToZJ9kiexhULetccf47nSF933FqXK2nvLVvqiKudRJ6q5aJpcFZ8P1GWDE59Pq3Jor1HESpJ6WMqTgWybmtMu32RcJLC5SkKkfoXDD4DomwTd3vo5BiKajQMhP2SrqYDYefXbBbcxUxtoQ6vDjph17cQ1NfTHrSuuMPSp3iw',
+  sdkMetadata: {
+    name: '@crossmint/client-sdk-react-ui',
+    version: '1.19.13',
+  },
 }
 
 const payloadInput = ref(JSON.stringify(demoPayload, null, 2))
@@ -48,8 +53,8 @@ const state = reactive({
   busy: false,
 })
 
-function parsePayload() {
-  return JSON.parse(payloadInput.value) as DemoPayload
+function parsePayload(): GenerateCrossmintHostedCheckoutUrlOptions {
+  return JSON.parse(payloadInput.value) as GenerateCrossmintHostedCheckoutUrlOptions
 }
 
 function updateUrl() {

@@ -14,15 +14,43 @@ pnpm add @belongnet/crossmint-sdk-modal-less
 import { generateCrossmintPaymentUrl } from '@belongnet/crossmint-sdk-modal-less'
 
 const crossmintPaymentUrl = generateCrossmintPaymentUrl({
-  projectId: '_YOUR_PROJECT_ID_',
-  collectionId: '_YOUR_CLIENT_ID',
-  mintConfig: {
-    type: 'erc-721',
-    totalPrice: '0.001',
-    _quantity: '1',
+  recipient: {
+    email: 'buyer@crossmint.com',
   },
-  successCallbackURL: 'https://example.com/success',
-  failureCallbackURL: 'https://example.com/failure',
+  locale: 'en-US',
+  lineItems: {
+    collectionLocator: 'crossmint:6294235c-135e-4be8-a0c6-4d3f5d5ae5c4',
+    callData: {
+      totalPrice: '2',
+    },
+  },
+  payment: {
+    crypto: {
+      enabled: true,
+      defaultChain: 'base-sepolia',
+      defaultCurrency: 'usdc',
+    },
+    fiat: {
+      enabled: true,
+      defaultCurrency: 'usd',
+    },
+    receiptEmail: 'receipt@crossmint.com',
+  },
+  appearance: {
+    display: 'popup',
+    overlay: {
+      enabled: true,
+    },
+    theme: {
+      button: 'dark',
+      checkout: 'light',
+    },
+  },
+  apiKey: 'ck_staging_REDACTED',
+  sdkMetadata: {
+    name: '@crossmint/client-sdk-react-ui',
+    version: '1.19.13',
+  },
 })
 
 // your modal implementation
