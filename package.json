@@ -18,7 +18,8 @@
   "author": "Reslear",
   "license": "MIT",
   "dependencies": {
-    "@crossmint/client-sdk-base": "^1.1.13"
+    "@crossmint/client-sdk-base": "^1.7.2",
+    "@crossmint/common-sdk-base": "^0.9.7"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
