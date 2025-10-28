@@ -82,5 +82,3 @@ export function generateCrossmintPaymentUrl(
 
   return `${urlWithPath}?${queryParams.toString()}`
 }
-
-export type { GenerateCrossmintHostedCheckoutUrlOptions }
