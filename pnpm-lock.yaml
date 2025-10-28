@@ -24,6 +24,15 @@ importers:
       '@belongnet/crossmint-sdk-modal-less':
         specifier: workspace:*
         version: link:..
+      '@iconify-json/heroicons':
+        specifier: ^1.2.3
+        version: 1.2.3
+      '@iconify-json/lucide':
+        specifier: ^1.2.71
+        version: 1.2.71
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.56
+        version: 1.2.56
       '@nuxt/eslint':
         specifier: 1.9.0
         version: 1.9.0(@typescript-eslint/utils@8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.22)(eslint@9.38.0(jiti@2.6.1))(magicast@0.5.0)(typescript@5.9.3)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
@@ -584,6 +593,15 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/heroicons@1.2.3':
+    resolution: {integrity: sha512-n+vmCEgTesRsOpp5AB5ILB6srsgsYK+bieoQBNlafvoEhjVXLq8nIGN4B0v/s4DUfa0dOrjwE/cKJgIKdJXOEg==}
+
+  '@iconify-json/lucide@1.2.71':
+    resolution: {integrity: sha512-KL+3JHW+wN8QqT3CN+7e1SzTe+gIunFBuUICtVmdCmdVRx+MdGNkX4xJhXoYHfhYO2azrEhoGPG+It9k30aZkw==}
+
+  '@iconify-json/simple-icons@1.2.56':
+    resolution: {integrity: sha512-oAvxOzgSjfvdj/Jsi3S7HDUCxO8/n2j8e1w1e/FktHUAXiWjNX00n3Tu3AP+n1ayKrypcUDXCzxn+0ENMl6ouw==}
 
   '@iconify/collections@1.0.612':
     resolution: {integrity: sha512-YwafHLk3sCSNWt5pxPEnR1O3LRD//zRJXye3T6KK7kkybOKc8mu8tscOuqlIH7qmfPh273SZldVR4HuBs+pdcQ==}
@@ -5769,6 +5787,18 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
+
+  '@iconify-json/heroicons@1.2.3':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/lucide@1.2.71':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.56':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/collections@1.0.612':
     dependencies:
