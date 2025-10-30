@@ -82,3 +82,4 @@ export function generateCrossmintPaymentUrl(
 
   return `${urlWithPath}?${queryParams.toString()}`
 }
+
