@@ -25,16 +25,16 @@ const footerItems = ref([
     <header class="mt-4">
       <div class="mb-10 space-y-3 text-center">
         <h1 class="text-3xl font-semibold">
-          Crossmint Modal-less Playground
+          Crossmint Hosted Checkout (pop-up) Playground
         </h1>
 
         <p class="text-sm">
           for
           <ULink
-            to="https://docs.crossmint.com/payments/embedded/upgrade/v3"
+            to="https://docs.crossmint.com/payments/pay-button/upgrade/v3"
             target="_blank"
           >
-            Crossmint v3 (migration guide) <UIcon name="i-heroicons-arrow-top-right-on-square" />
+            Crossmint v3 Hosted (migration guide) <UIcon name="i-heroicons-arrow-top-right-on-square" />
           </ULink>
         </p>
       </div>
